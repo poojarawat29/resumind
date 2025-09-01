@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
 @import "tailwindcss";
-@import "tw-animate-css";
+/* @import "tw-animate-css"; */
 
 @theme {
     --font-sans: "Mona Sans", ui-sans-serif, system-ui, sans-serif,
@@ -54,7 +54,7 @@ form {
         @apply bg-clip-text text-transparent bg-gradient-to-r from-[#AB8C95] via-[#000000] to-[#8E97C5];
     }
     .gradient-border {
-        @apply bg-gradient-to-b from-light-blue-100 to-light-blue-200 p-4 rounded-2xl;
+        @apply bg-gradient-to-b from-light-blue-100 to-light-blue-200 p-5 rounded-2xl;
     }
     .primary-button {
         @apply primary-gradient text-white rounded-full px-4 py-2 cursor-pointer w-full;
@@ -75,21 +75,29 @@ form {
         @apply primary-gradient rounded-full py-4 px-8 cursor-pointer w-[600px] max-md:w-full text-3xl font-semibold text-white;
     }
     .main-section {
-        @apply flex flex-col items-center gap-8 pt-12 max-sm:mx-2 mx-15 pb-5;
+        @apply flex flex-col items-center gap-8 pt-12 max-sm:mx-4 mx-8 pb-8;
     }
     .page-heading {
         @apply flex flex-col items-center gap-8 max-w-4xl text-center max-sm:gap-4;
     }
     .resumes-section {
-        @apply flex flex-wrap max-md:flex-col max-md:gap-4 gap-6 items-start max-md:items-center w-full max-w-[1850px] justify-evenly;
+        @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start max-md:items-center w-full max-w-[1200px] justify-center px-6 mx-auto;
     }
 
     .resume-card {
-        @apply flex flex-col gap-8 h-[560px] w-[350px] lg:w-[430px] xl:w-[490px] bg-white rounded-2xl p-4;
+        @apply flex flex-col gap-6 h-[600px] w-full max-w-[380px] bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 mx-auto my-4;
     }
 
     .resume-card-header {
         @apply flex flex-row gap-2 justify-between min-h-[110px] max-sm:flex-col items-center max-md:justify-center max-md:items-center;
+    }
+
+    .resume-image-container {
+        @apply w-full h-[320px] max-sm:h-[180px] overflow-hidden rounded-xl;
+    }
+
+    .resume-image {
+        @apply w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105;
     }
 
     .feedback-section {
@@ -140,6 +148,10 @@ form {
 @utility inset-shadow {
     box-shadow: inset 0 0 12px 0 rgba(36, 99, 235, 0.2);
     backdrop-filter: blur(10px);
+}
+
+@utility card-grid-spacing {
+    @apply gap-8 p-6;
 }
 
 @keyframes fadeIn {
