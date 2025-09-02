@@ -6,7 +6,9 @@
     "build": "react-router build",
     "dev": "react-router dev",
     "start": "react-router-serve ./build/server/index.js",
-    "typecheck": "react-router typegen && tsc"
+    "typecheck": "react-router typegen && tsc",
+    "sync-pdf-worker": "node scripts/sync-pdf-worker.js",
+    "postinstall": "npm run sync-pdf-worker"
   },
   "dependencies": {
     "@react-router/node": "^7.7.1",

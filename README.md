@@ -82,6 +82,20 @@ Make sure to deploy the output of `npm run build`
 
 This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
 
+## Troubleshooting
+
+### PDF Conversion Issues
+
+If you encounter PDF conversion errors related to version mismatches between the API and Worker versions, run:
+
+```bash
+npm run sync-pdf-worker
+```
+
+This command will automatically sync the PDF worker file with your installed `pdfjs-dist` package version, resolving version compatibility issues.
+
+**Note**: Always run this command after updating the `pdfjs-dist` package to ensure compatibility.
+
 ---
 
 Built with ❤️ using React Router.
