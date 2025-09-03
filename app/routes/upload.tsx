@@ -2,14 +2,12 @@ import {type FormEvent, useState} from 'react'
 import Navbar from "~/components/Navbar";
 import FileUploader from "~/components/FileUploader";
 import {usePuterStore} from "~/lib/puter";
-import {useNavigate} from "react-router";
 import {convertPdfToImage} from "~/lib/pdf2img";
 import {generateUUID} from "~/lib/utils";
-import {prepareInstructions} from "../../constants";
+import {prepareInstructions, AIResponseFormat as AI_FORMAT_SCHEMA} from "../../constants";
 
 const Upload = () => {
     const { auth, isLoading, fs, ai, kv } = usePuterStore();
-    const navigate = useNavigate();
     const [isProcessing, setIsProcessing] = useState(false);
     const [statusText, setStatusText] = useState('');
     const [file, setFile] = useState<File | null>(null);
@@ -69,11 +67,11 @@ const Upload = () => {
 
             setStatusText('Analyzing...');
             console.log('Starting AI analysis with path:', uploadedFile.path);
-            console.log('Instructions:', prepareInstructions({ jobTitle, jobDescription, AIResponseFormat: "JSON" }));
+            console.log('Instructions:', prepareInstructions({ jobTitle, jobDescription, AIResponseFormat: AI_FORMAT_SCHEMA }));
 
             const feedback = await ai.feedback(
                 uploadedFile.path,
-                prepareInstructions({ jobTitle, jobDescription, AIResponseFormat: "JSON" })
+                prepareInstructions({ jobTitle, jobDescription, AIResponseFormat: AI_FORMAT_SCHEMA })
             );
 
             if (!feedback) {
@@ -93,7 +91,20 @@ const Upload = () => {
             console.log('Feedback text to parse:', feedbackText);
 
             try {
-                const parsedFeedback = JSON.parse(feedbackText);
+                // Extract JSON from potential wrappers like code fences or prose
+                const extractJson = (input: string) => {
+                    const fenced = input.match(/```(?:json)?\n([\s\S]*?)\n```/i);
+                    if (fenced && fenced[1]) return fenced[1];
+                    const firstBrace = input.indexOf('{');
+                    const lastBrace = input.lastIndexOf('}');
+                    if (firstBrace !== -1 && lastBrace !== -1 && lastBrace > firstBrace) {
+                        return input.slice(firstBrace, lastBrace + 1);
+                    }
+                    return input;
+                };
+
+                const jsonToParse = extractJson(feedbackText);
+                const parsedFeedback = JSON.parse(jsonToParse);
                 console.log('Parsed feedback:', parsedFeedback);
 
                 data.feedback = parsedFeedback;
@@ -105,7 +116,7 @@ const Upload = () => {
 
                 // Add a small delay to ensure the user sees the completion message
                 setTimeout(() => {
-                    navigate(`/resume/${uuid}`);
+                    window.location.href = `/resume/${uuid}`;
                 }, 1000);
             } catch (parseError) {
                 console.error('Failed to parse AI feedback as JSON:', parseError);
@@ -174,8 +185,8 @@ const Upload = () => {
                             {/* Debug buttons for testing individual components */}
                             {file && (
                                 <div className="flex gap-4 mb-4">
-                                    <button 
-                                        type="button" 
+                                    <button
+                                        type="button"
                                         className="back-button"
                                         onClick={async () => {
                                             console.log("Testing PDF conversion...");
@@ -190,9 +201,9 @@ const Upload = () => {
                                     >
                                         Test PDF Conversion
                                     </button>
-                                    
-                                    <button 
-                                        type="button" 
+
+                                    <button
+                                        type="button"
                                         className="back-button"
                                         onClick={async () => {
                                             console.log("Testing file upload...");

@@ -1,11 +1,14 @@
-import {Link} from "react-router"
-const Navbar:()=>Element = ()=> {
+import type { JSX } from "react";
+const Navbar = (): JSX.Element => {
+
+
+    
     return (
 <nav className="navbar">
-    <Link to="/">
+    <a href="/">
         <p className="text-2xl font-bold text-gradient">RESUMIND</p>
-    </Link>
-        <Link to="/upload" className="primary-button w-fit">Upload Resume</Link>
+    </a>
+        <a href="/upload" className="primary-button w-fit">Upload Resume</a>
     </nav>
     )
 }
