@@ -1,5 +1,4 @@
-ai-resumind
-AI-powered resume analyzer and feedback tool
+
 
 🚀 About
 ai-resumind helps job seekers improve their resumes with the power of AI.
