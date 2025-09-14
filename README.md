@@ -1,6 +1,6 @@
 
 
-<h1 align="center">ai-resumind</h1>
+<h1 align="center">Resumind</h1>
 <p align="center"><b>AI-powered resume analyzer and feedback tool</b></p>
 <hr/>
 
