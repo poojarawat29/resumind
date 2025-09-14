@@ -1,101 +1,72 @@
-# Welcome to React Router!
+ai-resumind
+AI-powered resume analyzer and feedback tool
 
-A modern, production-ready template for building full-stack React applications using React Router.
+🚀 About
+ai-resumind helps job seekers improve their resumes with the power of AI.
+It analyzes resumes, matches them against job descriptions, and provides tailored feedback for ATS (Applicant Tracking Systems) and recruiters.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+The app is built with React + TypeScript + Tailwind and uses Puter.js for AI and serverless storage.
 
-## Features
+🛠️ Tech Stack
+Frontend: React, TypeScript, Vite
+Routing: React Router
+Styling/UI: Tailwind CSS
+State Management: Zustand
+AI & Storage: Puter.js
+Deployment: Vercel / Docker
+✨ Features
+📂 Resume upload & management
+🤖 AI-driven feedback & job-match scoring
+📊 ATS-style analysis against job postings
+📱 Responsive UI, mobile-friendly
+🔑 Simple client-side authentication
+🛠️ Clean, modular codebase
+📸 Demo
+🔗 Live Demo
+(Replace with your actual deployed URL if different)
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
-
-## Getting Started
-
-### Installation
-
-Install the dependencies:
-
-```bash
+⚡ Getting Started
+Prerequisites
+Node.js (v16+)
+npm or yarn
+Installation
+git clone https://github.com/poojarawat29/ai-resumind.git
+cd ai-resumind
 npm install
-```
-
-### Development
-
-Start the development server with HMR:
-
-```bash
+# or
+yarn install
+Run Locally
 npm run dev
-```
+# or
+yarn dev
+Open http://localhost:5173 in your browser.
 
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
-
-```bash
+Build for Production
 npm run build
-```
+# or
+yarn build
+📂 Project Structure
+ai-resumind/
+├── app/                # React app source code
+├── constants/          # App-wide constants
+├── public/             # Static assets
+├── types/              # TypeScript types
+├── Dockerfile          # Docker config
+├── package.json        # Dependencies & scripts
+├── tsconfig.json       # TypeScript config
+└── vite.config.ts      # Vite build config
+🤝 Contributing
+Contributions are welcome!
 
-## Deployment
+Fork the repo
+Create your feature branch (git checkout -b feature/new-feature)
+Commit your changes (git commit -m 'Add new feature')
+Push to the branch (git push origin feature/new-feature)
+Open a Pull Request
+📜 License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
-## Troubleshooting
-
-### PDF Conversion Issues
-
-If you encounter PDF conversion errors related to version mismatches between the API and Worker versions, run:
-
-```bash
-npm run sync-pdf-worker
-```
-
-This command will automatically sync the PDF worker file with your installed `pdfjs-dist` package version, resolving version compatibility issues.
-
-**Note**: Always run this command after updating the `pdfjs-dist` package to ensure compatibility.
-
----
-
-Built with ❤️ using React Router.
+📬 Contact
+👩‍💻 Author: Pooja Rawat
+🌐 GitHub Profile
+📌 Project Issues
