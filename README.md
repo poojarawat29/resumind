@@ -3,7 +3,112 @@ AI-powered resume analyzer and feedback tool
 
 🚀 About
 ai-resumind helps job seekers improve their resumes with the power of AI.
-It analyzes resumes, matches them against job descriptions, and provides tailored feedback for ATS (Applicant Tracking Systems) and recruiters.
+It analyzes resumes, matches them against job descriptions, and provides ta<h1 align="center">ai-resumind</h1>
+<p align="center"><b>AI-powered resume analyzer and feedback tool</b></p>
+<hr/>
+
+<h2>🚀 About</h2>
+<p>
+  <b>ai-resumind</b> helps job seekers improve their resumes with the power of AI.<br/>
+  It analyzes resumes, matches them against job descriptions, and provides tailored feedback for ATS (Applicant Tracking Systems) and recruiters.
+</p>
+<p>
+  The app is built with <b>React + TypeScript + Tailwind</b> and uses <b>Puter.js</b> for AI and serverless storage.
+</p>
+
+<h2>🛠️ Tech Stack</h2>
+<ul>
+  <li><b>Frontend:</b> React, TypeScript, Vite</li>
+  <li><b>Routing:</b> React Router</li>
+  <li><b>Styling/UI:</b> Tailwind CSS</li>
+  <li><b>State Management:</b> Zustand</li>
+  <li><b>AI & Storage:</b> Puter.js</li>
+  <li><b>Deployment:</b> Vercel / Docker</li>
+</ul>
+
+<h2>✨ Features</h2>
+<ul>
+  <li>📂 Resume upload & management</li>
+  <li>🤖 AI-driven feedback & job-match scoring</li>
+  <li>📊 ATS-style analysis against job postings</li>
+  <li>📱 Responsive UI, mobile-friendly</li>
+  <li>🔑 Simple client-side authentication</li>
+  <li>🛠️ Clean, modular codebase</li>
+</ul>
+
+<h2>📸 Demo</h2>
+<p>
+  🔗 <a href="https://ai-resumind-zeta.vercel.app" target="_blank">Live Demo</a><br/>
+  <i>(Replace with your actual deployed URL if different)</i>
+</p>
+
+<h2>⚡ Getting Started</h2>
+<h3>Prerequisites</h3>
+<ul>
+  <li>Node.js (v16+)</li>
+  <li>npm or yarn</li>
+</ul>
+
+<h3>Installation</h3>
+<pre>
+git clone https://github.com/poojarawat29/ai-resumind.git
+cd ai-resumind
+npm install
+# or
+yarn install
+</pre>
+
+<h3>Run Locally</h3>
+<pre>
+npm run dev
+# or
+yarn dev
+</pre>
+<p>Open <a href="http://localhost:5173">http://localhost:5173</a> in your browser.</p>
+
+<h3>Build for Production</h3>
+<pre>
+npm run build
+# or
+yarn build
+</pre>
+
+<h2>📂 Project Structure</h2>
+<pre>
+ai-resumind/
+├── app/                # React app source code
+├── constants/          # App-wide constants
+├── public/             # Static assets
+├── types/              # TypeScript types
+├── Dockerfile          # Docker config
+├── package.json        # Dependencies & scripts
+├── tsconfig.json       # TypeScript config
+└── vite.config.ts      # Vite build config
+</pre>
+
+
+
+<h2>🤝 Contributing</h2>
+<p>Contributions are welcome!</p>
+<ol>
+  <li>Fork the repo</li>
+  <li>Create your feature branch (<code>git checkout -b feature/new-feature</code>)</li>
+  <li>Commit your changes (<code>git commit -m 'Add new feature'</code>)</li>
+  <li>Push to the branch (<code>git push origin feature/new-feature</code>)</li>
+  <li>Open a Pull Request</li>
+</ol>
+
+<h2>📜 License</h2>
+<p>This project is licensed under the <b>MIT License</b>.  
+See the <a href="LICENSE">LICENSE</a> file for details.</p>
+
+<h2>📬 Contact</h2>
+<p>
+  👩‍💻 <b>Author:</b> Pooja Rawat<br/>
+  🌐 <a href="https://github.com/poojarawat29">GitHub Profile</a><br/>
+  📌 <a href="https://github.com/poojarawat29/ai-resumind/issues">Project Issues</a>
+</p>
+ilored feedback for ATS (Applicant Tracking Systems) and recruiters.
 
 The app is built with React + TypeScript + Tailwind and uses Puter.js for AI and serverless storage.
 
