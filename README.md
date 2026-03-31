@@ -36,7 +36,13 @@
 <h2>📸 Demo</h2>
 <p>
   🔗 <a href="https://ai-resumind-zeta.vercel.app" target="_blank">Live Demo</a><br/>
-  <i>(Replace with your actual deployed URL if different)</i>
+</p>
+<p>
+  <img width="2850" height="1666" alt="Screenshot 2026-04-01 002729" src="https://github.com/user-attachments/assets/be5cd5b6-e740-42cd-83af-02f772c5c967" />
+  <img width="3166" height="1708" alt="Screenshot 2026-04-01 002444" src="https://github.com/user-attachments/assets/43dac639-bc3b-403b-b7c5-a5976a46957f" />
+<img width="3150" height="1708" alt="Screenshot 2026-04-01 002509" src="https://github.com/user-attachments/assets/aba72da8-9b5a-40a1-abd2-6f4ee90ea6dc" />
+
+
 </p>
 
 <h2>⚡ Getting Started</h2>
